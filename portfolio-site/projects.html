@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All Projects — Denzell Richardson</title>
+  <link rel="stylesheet" href="css/styles_cyber.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    .projects-hero{margin-top:24px;line-height:1.8;margin-bottom:32px}
+    .projects-hero h1{font-size:32px;margin-bottom:16px}
+    .projects-intro{color:#9fbfaf;max-width:700px;margin-bottom:24px}
+    .back-link{display:inline-block;margin-bottom:24px;color:var(--muted);text-decoration:none;font-size:12px}
+    .back-link:hover{color:var(--accent)}
+    .projects-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:28px}
+    .project-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:20px;border-radius:10px;border:1px solid rgba(0,255,153,0.04);transition:all 0.3s ease;display:flex;flex-direction:column}
+    .project-card:hover{background:linear-gradient(180deg,rgba(255,255,255,0.04),transparent);border-color:rgba(0,255,153,0.15);box-shadow:0 0 20px rgba(0,255,153,0.1);transform:translateY(-4px)}
+    .project-card h3{margin:0 0 12px 0;color:var(--accent);font-size:18px}
+    .project-card p{color:#9fbfaf;margin:0 0 12px 0;line-height:1.6;flex-grow:1}
+    .project-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+    .project-tag{display:inline-block;padding:4px 8px;background:rgba(0,255,153,0.06);border-radius:4px;font-size:11px;color:var(--muted)}
+    .project-links{display:flex;gap:8px;margin-top:auto}
+    .project-links a{display:inline-block;padding:6px 12px;background:transparent;border:1px solid rgba(0,255,153,0.2);border-radius:6px;color:var(--muted);text-decoration:none;font-size:12px;transition:all 0.2s ease}
+    .project-links a:hover{border-color:var(--accent);color:var(--accent);box-shadow:0 0 10px rgba(0,255,153,0.2)}
+    .demo-section{margin-top:40px}
+    .calc-wrapper{display:flex;justify-content:center;margin-top:20px}
+    .calculator{background:rgba(0,0,0,0.4);border:1px solid rgba(0,255,153,0.25);border-radius:12px;padding:16px;width:100%;max-width:320px;box-shadow:0 0 30px rgba(0,255,153,0.15)}
+    .calc-display{width:100%;padding:16px;background:rgba(0,0,0,0.7);border:1px solid rgba(0,255,153,0.3);border-radius:8px;color:var(--accent);font-size:28px;text-align:right;margin-bottom:12px;font-family:monospace;box-shadow:inset 0 0 10px rgba(0,255,153,0.1)}
+    .calc-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .calc-btn{padding:12px;border:1px solid rgba(0,255,153,0.2);border-radius:8px;background:rgba(0,255,153,0.08);color:var(--muted);font-size:16px;font-weight:600;cursor:pointer;transition:all 0.2s ease}
+    .calc-btn:hover{background:rgba(0,255,153,0.15);border-color:var(--accent);box-shadow:0 0 10px rgba(0,255,153,0.3);transform:translateY(-2px)}
+    .calc-btn.operator{background:rgba(255,107,107,0.1);border-color:rgba(255,107,107,0.3);color:#ff6b6b}
+    .calc-btn.operator:hover{background:rgba(255,107,107,0.2);border-color:#ff6b6b;box-shadow:0 0 10px rgba(255,107,107,0.3)}
+    .calc-btn.equals{grid-column:span 2;background:rgba(0,255,153,0.2);border-color:var(--accent);color:var(--accent)}
+    .calc-btn.equals:hover{background:rgba(0,255,153,0.35);box-shadow:0 0 15px rgba(0,255,153,0.4)}
+    .calc-btn.clear{grid-column:span 1;background:rgba(255,107,107,0.1);border-color:rgba(255,107,107,0.3);color:#ff6b6b}
+    .calc-btn.clear:hover{background:rgba(255,107,107,0.2);border-color:#ff6b6b}
+    .calc-btn.delete{background:rgba(255,107,107,0.08);border-color:rgba(255,107,107,0.2);color:#ff9999}
+    .calc-btn.delete:hover{background:rgba(255,107,107,0.15);border-color:#ff6b6b}
+    .calc-btn.decimal{color:var(--accent);border-color:rgba(0,255,153,0.2)}
+    .calc-btn.zero{grid-column:span 1}
+  </style>
+</head>
+<body class="cyber">
+  <div class="grid-bg"></div>
+  <header class="top">
+    <div class="container">
+      <div class="brand">DR<span class="dot">•</span></div>
+      <nav>
+        <a href="index.html">Portfolio</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="projects.html">All Projects</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="index.html#contact">Contact</a>
+        <button id="themeToggle">LIGHT</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="projects-hero">
+      <h1>All <span class="accent">Projects</span></h1>
+      <p class="projects-intro">This page lists every project I've built so far, with links to code, demos and downloads. Scroll down to explore; you can always jump back to the homepage for the live calculator example.</p>
+      <img src="https://media.giphy.com/media/Lq0h93752f6J9tijrh/giphy.gif" alt="Coding animation" style="max-width:480px;width:100%;border:1px solid rgba(0,255,153,0.2);border-radius:10px;box-shadow:0 0 20px rgba(0,255,153,0.15);margin-top:20px">
+    </div>
+
+
+    <div class="projects-container" id="projectsFullGrid"></div>
+  </main>
+
+  <footer class="foot">© <span id="year"></span> Denzell Richardson — Brooklyn</footer>
+
+  <script>
+    // calculator functions (same as index)
+    let calcInput = '0';
+    function appendNumber(num) {
+      if (calcInput === '0' && num !== '.') calcInput = '';
+      if (num === '.' && calcInput.includes('.')) return;
+      calcInput += num;
+      updateCalcDisplay();
+    }
+    function appendOperator(op) {
+      if (calcInput === '') return;
+      if (['+', '-', '/', '*'].some(o => calcInput.endsWith(o))) {
+        calcInput = calcInput.slice(0, -1);
+      }
+      calcInput += op;
+      updateCalcDisplay();
+    }
+    function clearCalc() {
+      calcInput = '0';
+      updateCalcDisplay();
+    }
+    function deleteChar() {
+      calcInput = calcInput.slice(0, -1) || '0';
+      updateCalcDisplay();
+    }
+    function calculateResult() {
+      try {
+        calcInput = String(eval(calcInput));
+        if (calcInput === 'Infinity' || calcInput === 'NaN') calcInput = 'Error';
+      } catch {
+        calcInput = 'Error';
+      }
+      updateCalcDisplay();
+    }
+    function updateCalcDisplay() {
+      const display = document.getElementById('calcDisplay');
+      if (display) display.value = calcInput;
+    }
+
+    const projectsData = [
+      {title: 'Trade Journal (In Progress)', desc: 'Web app to track trading performance using JS calculations and localStorage.', tags:['JavaScript','localStorage'], repo:'https://github.com/Staticshock1013', demo:'#'},
+      {title: 'Rock Paper Scissors', desc: 'Interactive browser game using JS and DOM manipulation. Deployed to GitHub Pages.', tags:['JavaScript','DOM'], repo:'https://github.com/Staticshock1013', demo:'#'},
+      {title: 'Responsive Landing Page', desc: 'Mobile-first landing page built with HTML, CSS, Bootstrap.', tags:['HTML','CSS','Bootstrap'], repo:'https://github.com/Staticshock1013', demo:'#'},
+      {title: 'Portfolio Website', desc: 'This website itself with interactive features and custom animations.', tags:['JavaScript','CSS','Design'], repo:'https://github.com/Staticshock1013', demo:'index.html'},
+      {title: 'Calculator Demo', desc: 'Simple interactive calculator built with vanilla JavaScript. View it live on the homepage.', tags:['JavaScript','Demo'], repo:'https://github.com/Staticshock1013', demo:'index.html'}
+    ];
+
+    function renderProjects() {
+      const grid = document.getElementById('projectsFullGrid');
+      grid.innerHTML = projectsData.map(p => `
+        <div class="project-card">
+          <h3>${p.title}</h3>
+          <p>${p.desc}</p>
+          <div class="project-tags">
+            ${p.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
+          </div>
+          <div class="project-links">
+            <a href="${p.repo}" target="_blank">View Code</a>
+            ${p.demo !== '#' ? `<a href="${p.demo}">See Demo</a>` : '<a href="#" style="opacity:0.5">Demo</a>'}
+            <a href="${p.repo}/archive/refs/heads/main.zip" target="_blank">Download</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderProjects();
+
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('cyber');
+      themeToggle.textContent = document.body.classList.contains('cyber') ? 'LIGHT' : 'DARK';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Denzell Richardson — Resume</title>
+  <link rel="stylesheet" href="css/styles_cyber.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:Inter,system-ui,Arial;max-width:900px;margin:24px auto;color:#cdeedd;background:radial-gradient(ellipse at top left,#041024 0%,#01020a 60%);padding:28px}
+    .grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,153,0.03) 1px, transparent 1px),linear-gradient(90deg,rgba(0,255,153,0.02) 1px, transparent 1px);background-size:24px 24px;pointer-events:none;z-index:0}
+    .container{position:relative;z-index:1}
+    .top{display:flex;align-items:center;justify-content:space-between;padding:18px 0;margin-bottom:28px;border-bottom:1px solid rgba(0,255,153,0.1)}
+    .brand{font-family:'Rubik Mono One',sans-serif;color:#00ff99;letter-spacing:1px}
+    .brand .dot{color:#ff6b6b;margin-left:6px}
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:#7fd3b3;text-decoration:none;font-size:13px}
+    nav a:hover{color:#00ff99}
+    #themeToggle{background:transparent;border:1px solid rgba(255,255,255,0.04);color:#7fd3b3;padding:6px 10px;border-radius:8px;font-size:12px;cursor:pointer}
+    .back-link{display:inline-block;margin-bottom:24px;color:#7fd3b3;text-decoration:none;font-size:12px}
+    .back-link:hover{color:#00ff99}
+    h1,h2,h3{margin:0}
+    .muted{color:#9fbfaf}
+    .section{margin-top:18px}
+    .meta{margin-top:6px}
+    .contact a{color:#cdeedd;text-decoration:none}
+    .contact a:hover{color:#00ff99}
+    .action-buttons{margin-top:16px;display:flex;gap:12px}
+    .action-buttons a{display:inline-block;padding:8px 12px;background:transparent;border:1px solid rgba(0,255,153,0.3);border-radius:6px;color:#7fd3b3;text-decoration:none;font-size:12px;transition:all 0.2s ease}
+    .action-buttons a:hover{border-color:#00ff99;color:#00ff99;box-shadow:0 0 10px rgba(0,255,153,0.2)}
+    @media print{body{background:#fff;color:#000}.grid-bg{display:none}.top{display:none}.action-buttons{display:none}}
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <header class="top">
+    <div class="brand">DR<span class="dot">•</span></div>
+    <nav>
+      <a href="index.html">Portfolio</a>
+      <a href="index.html#projects">Projects</a>      <a href="projects.html">All Projects</a>      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <button id="themeToggle">PRINT</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="action-buttons">
+      <a href="resume.pdf" download>⬇ Download PDF</a>
+      <a href="#" onclick="window.print()">🖨 Print</a>
+    </div>
+
+  <section class="section">
+    <h2>Professional Summary</h2>
+    <p class="muted">Motivated Computer Science student at Borough of Manhattan Community College with hands-on experience in front-end development, technical troubleshooting, and structured problem-solving. Skilled in building responsive web applications using JavaScript, HTML, and CSS. Seeking a part-time IT Support, Technical Assistant, or Technology Internship role to further develop full-stack and systems expertise.</p>
+  </section>
+
+  <section class="section">
+    <h3>Technical Skills</h3>
+    <ul class="muted">
+      <li>Programming: JavaScript (ES6+), Python (Foundational), HTML5, CSS3</li>
+      <li>Web Development: DOM Manipulation, Responsive/Mobile-first Design, React Basics, Bootstrap, jQuery, Local Storage</li>
+      <li>Tools & Platforms: Git & GitHub (including Pages deployment), VS Code, Chrome DevTools, Terminal/Command Line</li>
+      <li>Additional Technologies: GitHub Actions (CI), Syntax highlighting, Debugging techniques</li>
+      <li>Operating Systems: Windows & macOS</li>
+      <li>Networking: Basic Troubleshooting, Networking Concepts (IP, DNS Basics)</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3>Projects</h3>
+    <ul class="muted">
+      <li><strong>Trade Journal (In Progress)</strong> — Built a web app to track trading performance using JavaScript calculations and localStorage persistence.</li>
+      <li><strong>Rock Paper Scissors</strong> — Interactive browser game using JavaScript, event listeners, DOM manipulation. Deployed via GitHub Pages.</li>
+      <li><strong>Responsive Landing Page</strong> — Mobile-first design using HTML, CSS, and Bootstrap with clean UI and responsive grids.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3>Experience</h3>
+    <ul class="muted">
+      <li>Applied structured debugging methods to identify and resolve code issues.</li>
+      <li>Collaborated using Git for version control and project tracking.</li>
+      <li>Maintained clean coding standards and documentation practices.</li>
+      <li>Continuously self-study emerging technologies and implement them in projects.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3>Education</h3>
+    <p class="muted">Borough of Manhattan Community College (BMCC) — Associate Degree in Computer Science<br>Expected Graduation: Fall 2027</p>
+    <p class="muted">Relevant Coursework: Introduction to Programming (Python), Computer Science Fundamentals</p>
+  </section>
+
+  <section class="section">
+    <h3>Certifications</h3>
+    <ul class="muted">
+      <li>Google IT Support Professional Certificate (In Progress)</li>
+      <li>CompTIA IT Fundamentals (ITF+) (In Progress)</li>
+    </ul>
+  </section>
+
+</body>
+</html>
