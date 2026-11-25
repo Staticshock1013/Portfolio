@@ -63,8 +63,7 @@
 
     <div class="projects-hero">
       <h1>All <span class="accent">Projects</span></h1>
-      <p class="projects-intro">This page lists every project I've built so far, with links to code, demos and downloads. Scroll down to explore; you can always jump back to the homepage for the live calculator example.</p>
-      <img src="https://media.giphy.com/media/Lq0h93752f6J9tijrh/giphy.gif" alt="Coding animation" style="max-width:480px;width:100%;border:1px solid rgba(0,255,153,0.2);border-radius:10px;box-shadow:0 0 20px rgba(0,255,153,0.15);margin-top:20px">
+      <p class="projects-intro">Hire-ready work first: research backtesting and geospatial data pipelines in <a href="https://github.com/Staticshock1013/engineering-showcase" target="_blank" rel="noopener">engineering-showcase</a>, plus earlier web practice projects.</p>
     </div>
 
 
@@ -113,11 +112,11 @@
     }
 
     const projectsData = [
-      {title: 'Trade Journal (In Progress)', desc: 'Web app to track trading performance using JS calculations and localStorage.', tags:['JavaScript','localStorage'], repo:'https://github.com/Staticshock1013', demo:'#'},
-      {title: 'Rock Paper Scissors', desc: 'Interactive browser game using JS and DOM manipulation. Deployed to GitHub Pages.', tags:['JavaScript','DOM'], repo:'https://github.com/Staticshock1013', demo:'#'},
-      {title: 'Responsive Landing Page', desc: 'Mobile-first landing page built with HTML, CSS, Bootstrap.', tags:['HTML','CSS','Bootstrap'], repo:'https://github.com/Staticshock1013', demo:'#'},
-      {title: 'Portfolio Website', desc: 'This website itself with interactive features and custom animations.', tags:['JavaScript','CSS','Design'], repo:'https://github.com/Staticshock1013', demo:'index.html'},
-      {title: 'Calculator Demo', desc: 'Simple interactive calculator built with vanilla JavaScript. View it live on the homepage.', tags:['JavaScript','Demo'], repo:'https://github.com/Staticshock1013', demo:'index.html'}
+      {title: 'quant-lab', desc: 'Research-only NQ futures + equity backtesting: pre-registered SPEC/HASH, no-lookahead engine, explicit NQ costs, PDHL demo.', tags:['Python','pandas','pytest','CI'], repo:'https://github.com/Staticshock1013/engineering-showcase/tree/main/projects/07-quant-lab', demo:'https://github.com/Staticshock1013/engineering-showcase'},
+      {title: 'TerraTrend Global', desc: 'Streamlit geospatial MVP: authenticated NASA MODIS LST/NDVI, QC gates, six-city coverage map. Period-level samples only.', tags:['Python','Streamlit','NASA'], repo:'https://github.com/Staticshock1013/engineering-showcase/tree/main/projects/06-terratrend-global', demo:'https://github.com/Staticshock1013/engineering-showcase'},
+      {title: 'Engineering Showcase', desc: 'Monorepo of daily, tested milestones for ML / data / IT roles.', tags:['Python','Docs','GitHub Actions'], repo:'https://github.com/Staticshock1013/engineering-showcase', demo:'https://github.com/Staticshock1013/engineering-showcase'},
+      {title: 'Rock Paper Scissors', desc: 'Interactive browser game using JS and DOM manipulation.', tags:['JavaScript','DOM'], repo:'https://github.com/Staticshock1013/Rock-Paper-Scissors', demo:'#'},
+      {title: 'Portfolio Website', desc: 'This site — project highlights and resume for recruiters.', tags:['JavaScript','CSS','HTML'], repo:'https://github.com/Staticshock1013/Portfolio', demo:'index.html'}
     ];
 
     function renderProjects() {
@@ -130,9 +129,8 @@
             ${p.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
           </div>
           <div class="project-links">
-            <a href="${p.repo}" target="_blank">View Code</a>
-            ${p.demo !== '#' ? `<a href="${p.demo}">See Demo</a>` : '<a href="#" style="opacity:0.5">Demo</a>'}
-            <a href="${p.repo}/archive/refs/heads/main.zip" target="_blank">Download</a>
+            <a href="${p.repo}" target="_blank" rel="noopener">View Code</a>
+            ${p.demo !== '#' ? `<a href="${p.demo}" target="_blank" rel="noopener">Open</a>` : ''}
           </div>
         </div>
       `).join('');

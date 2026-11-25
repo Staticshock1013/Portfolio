@@ -1,17 +1,24 @@
-# Portfolio Site (scaffold)
+# Denzell Richardson — Portfolio
 
-This is a minimal, polished portfolio scaffold you can customize quickly.
+Recruiter-facing site for BMCC CS student targeting **ML Engineer**, **Quant Research (junior)**, **Data/Python**, and IT support roles.
 
-Quick start
+## Featured work
 
-1. Open `index.html` in your browser.
-2. Edit `index.html` to change your name and bio.
-3. Update `script.js` → `projects` array with your projects and links.
-4. Replace `resume.pdf` with your resume file.
+Primary code lives in **[engineering-showcase](https://github.com/Staticshock1013/engineering-showcase)**:
 
-Deployment
+- **quant-lab** — research-only NQ futures backtesting (`projects/07-quant-lab/`)
+- **TerraTrend Global** — NASA MODIS Streamlit MVP (`projects/06-terratrend-global/`)
 
-- For GitHub Pages: push this folder to a repo and enable Pages for the `main` branch.
-- For Netlify/Vercel: drag & drop or connect the repo and deploy.
+## Run locally
 
-Need help customizing? Paste your resume, project links, and color preferences and I’ll integrate them.
+Open `index.html` in a browser, or serve the folder:
+
+```bash
+python3 -m http.server 8080 --bind 127.0.0.1
+```
+
+Then visit `http://127.0.0.1:8080`.
+
+## GitHub Pages
+
+Enable Pages on the `main` branch (root). Site files are static HTML/CSS/JS.

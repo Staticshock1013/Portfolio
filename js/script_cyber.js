@@ -37,9 +37,9 @@ function updateCalcDisplay() {
 }
 
 const projects = [
-  {title: 'Trade Journal (In Progress)', desc: 'Web app to track trading performance using JS calculations and localStorage.', tags:['JavaScript','localStorage'], link:'https://github.com/Staticshock1013'},
-  {title: 'Rock Paper Scissors', desc: 'Interactive browser game using JS and DOM manipulation. Deployed to GitHub Pages.', tags:['JavaScript','DOM'], link:'https://github.com/Staticshock1013'},
-  {title: 'Responsive Landing Page', desc: 'Mobile-first landing page built with HTML, CSS, Bootstrap.', tags:['HTML','CSS','Bootstrap'], link:'https://github.com/Staticshock1013'}
+  {title: 'quant-lab', desc: 'Research-only NQ futures backtesting: pre-registered SPECs, no-lookahead engine, explicit NQ costs ($2.50/side), honest SPENT holdout labeling.', tags:['Python','pandas','pytest','CI'], link:'https://github.com/Staticshock1013/engineering-showcase/tree/main/projects/07-quant-lab'},
+  {title: 'TerraTrend Global', desc: 'Streamlit geospatial MVP with authenticated NASA MODIS LST/NDVI samples, QC gates, and six-city coverage — period-level verified data only.', tags:['Python','Streamlit','NASA MODIS'], link:'https://github.com/Staticshock1013/engineering-showcase/tree/main/projects/06-terratrend-global'},
+  {title: 'Engineering Showcase', desc: 'Monorepo of tested, documented projects aimed at ML / data / IT roles. Clone, run, review.', tags:['Python','GitHub Actions','Docs'], link:'https://github.com/Staticshock1013/engineering-showcase'}
 ];
 
 function renderProjects(){
@@ -49,7 +49,7 @@ function renderProjects(){
   projects.forEach(p=>{
     const el = document.createElement('div');
     el.className = 'card';
-    el.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p><div>${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}<div style="margin-top:10px"><a class="btn" href="${p.link}" target="_blank">View</a> <a class="btn" href="${p.link}/archive/refs/heads/main.zip" target="_blank" style="margin-left:8px">Download</a></div>`;
+    el.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p><div>${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}<div style="margin-top:10px"><a class="btn" href="${p.link}" target="_blank" rel="noopener">View on GitHub</a></div>`;
     grid.appendChild(el);
   });
 }
@@ -57,12 +57,13 @@ function renderProjects(){
 function handleContact(e){
   e.preventDefault();
   const f = e.target;
-  alert('Thanks, '+f.name.value+'. I will reply to '+f.email.value+'.');
-  f.reset();
+  const subject = encodeURIComponent('Portfolio contact from ' + f.name.value);
+  const body = encodeURIComponent(f.message.value + '\n\n— ' + f.name.value + ' <' + f.email.value + '>');
+  window.location.href = 'mailto:Denzellr96@gmail.com?subject=' + subject + '&body=' + body;
 }
 
 // tiny terminal typer
-const phrases = ['learning: C++', 'studying: data-structures', 'building: trade-journal', 'deploying: github-pages'];
+const phrases = ['building: quant-lab', 'shipping: terratrend', 'testing: pytest + CI', 'target: ML / Python roles'];
 let idx = 0; let pidx = 0;
 function typeLoop(){
   const el = document.getElementById('typer');
